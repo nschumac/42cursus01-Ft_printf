@@ -11,7 +11,7 @@ The aim of this 42cursus Project is to recode the "classic" printf of the standa
 </object>
 
 ## Result:
-- Status: <p style="color:#00FF00";>Completed</p>
-- Result: <p style="color:#00FF00";>100%</p>
+- Status: <span style="color:#00FF00">Completed</span>
+- Result: <span style="color:#00FF00">100%</span>
 
 # Contact:
