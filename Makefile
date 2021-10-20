@@ -24,7 +24,7 @@ OBJECTS = $(SOURCES:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	@Make bonus --directory=$(LIBFT)
+	@Make bonus -s --directory=$(LIBFT)
 	@cp $(LIBFT)/libft.a $(NAME)
 	@ar -crs $(NAME) $(OBJECTS)
 	@echo libftprintf Compiled!
