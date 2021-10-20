@@ -3,6 +3,9 @@
 ## Description:
 The aim of this 42cursus Project is to recode the "classic" printf of the standard library
 
+## Usage:
+'git clone --recursive https://github.com/nschumac/42cursus01-Ft_printf'
+
 ## Subject:
 <object data="https://github.com/nschumac/42cursus01-Ft_printf/blob/main/subject/ft_printf.en.pdf" type="application/pdf" width="700px" height="700px">
     <embed src="https://github.com/nschumac/42cursus01-Ft_printf/blob/main/subject/ft_printf.en.pdf">
