@@ -4,6 +4,7 @@
 The aim of this 42cursus-Project is to recode the "classic" printf of the standard library
 
 ## Usage:
+*MacOs Linux only*
 - `git clone --recursive https://github.com/nschumac/42cursus01-Ft_printf`
 - run `make all` in cloned repository
 - include ft_printf.h in your project.
@@ -20,7 +21,7 @@ The aim of this 42cursus-Project is to recode the "classic" printf of the standa
 - Status: <span style="color:green">Completed</span>
 - Result: <span style="color:green">100%</span>
 
-### Contact:
+## Contact:
 - 42-slack: @nschumac
 - 42-email: [nschumac@student.42heilbronn.de](nschumac@student.42heilbronn.de)
 - 42-profile: [https://profile.intra.42.fr/users/nschumac](https://profile.intra.42.fr/users/nschumac)
