@@ -1,7 +1,7 @@
 # 42cursus01-Ft_printf
 
 ## Description:
-The aim of this 42cursus Project is to recode the "classic" printf of the standard library
+The aim of this 42cursus-Project is to recode the "classic" printf of the standard library
 
 ## Usage:
 - `git clone --recursive https://github.com/nschumac/42cursus01-Ft_printf`
