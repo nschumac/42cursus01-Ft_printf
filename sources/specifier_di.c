@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char	*ft_fixprecision_di(long num)
 {

@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 char	*ft_fixprecision_xX(unsigned long num, const char *set)
 {

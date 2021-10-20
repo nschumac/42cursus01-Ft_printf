@@ -1,6 +1,10 @@
-COMMAND = gcc -Wall -Wextra -Werror -c
+NAME = libftprintf.a
 
-INCLUDES = -I ft_printf.h -I libft/libft.h
+CC = gcc
+CFLAGS = -Wall -Werror -Wextra -c
+
+LIBFT = ./42cursus00-Libft
+
 SOURCES =	sources/disect.c			\
 			sources/ft_printf.c			\
 			sources/padding.c			\
@@ -14,28 +18,23 @@ SOURCES =	sources/disect.c			\
 
 OBJECTS = $(SOURCES:.c=.o)
 
-LIBFT = ./libft
-
-NAME = libftprintf.a
+%.o: %.c
+	@$(CC) $(CCFLAGS) -o $@ -c $<
 
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	Make bonus --directory=$(LIBFT)
-	cp libft/libft.a $(NAME)
-	ar -crs $(NAME) $(OBJECTS) 
-
-%.o: %.c $(INCLUDES)
-	$(COMMAND) $< $(INCLUDES)
+	@Make bonus --directory=$(LIBFT)
+	@cp libft/libft.a $(NAME)
+	@ar -crs $(NAME) $(OBJECTS)
+	@echo libftprintf Compiled!
 
 clean:
-	make clean --directory=$(LIBFT)
-	rm -rf $(OBJECTS)
+	@make clean --directory=$(LIBFT)
+	@rm -rf $(OBJECTS)
 
-fclean:
-	make fclean --directory=$(LIBFT)
-	rm -rf $(OBJECTS) $(NAME)
+fclean: clean
+	@make fclean --directory=$(LIBFT)
+	@rm -rf $(NAME)
 
-re:
-	Make fclean
-	Make all
+re: fclean all

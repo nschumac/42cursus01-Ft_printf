@@ -1,4 +1,4 @@
-#include "ft_printf.h"
+#include "../ft_printf.h"
 
 void	ft_fixwidthprecision_p(unsigned long long num, char *strnum, int len)
 {
