@@ -10,7 +10,7 @@ void	ft_fixwidthprecision_s(char *str)
 		len = g_precision;
 		*(str + len) = '\0';
 	}
-	if (ft_abs(g_width) < len)
+	if (ft_llabs(g_width) < len)
 		g_width = 0;
 	else
 		ft_truesubtract(&g_width, len);

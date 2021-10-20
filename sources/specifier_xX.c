@@ -5,7 +5,7 @@ char	*ft_fixprecision_xX(unsigned long num, const char *set)
 	char	*ret;
 	int		retlen;
 
-	ret = ft_itoabase(num, set);
+	ret = ft_ulltoabase(num, set);
 	retlen = ft_strlen(ret);
 	if (g_precision_status == PRECISE && g_precision >= 0)
 	{
@@ -14,7 +14,7 @@ char	*ft_fixprecision_xX(unsigned long num, const char *set)
 		g_precision -= retlen;
 		if (g_flag == ZERO)
 			g_flag = NONE;
-		if (g_precision > ft_abs(g_width))
+		if (g_precision > ft_llabs(g_width))
 			g_width = 0;
 		if (g_precision > 0)
 			ft_truesubtract(&g_width, g_precision);
@@ -25,7 +25,7 @@ char	*ft_fixprecision_xX(unsigned long num, const char *set)
 
 void	ft_fixwidth_xX(int retlen, int neg)
 {
-	if (ft_abs(g_width) > retlen)
+	if (ft_llabs(g_width) > retlen)
 		ft_truesubtract(&g_width, retlen + neg);
 	else
 		g_width = 0;

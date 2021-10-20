@@ -5,7 +5,7 @@ char	*ft_fixprecision_di(long num)
 	char	*ret;
 	int		retlen;
 
-	ret = ft_itoa(ft_abs(num));
+	ret = ft_itoa(ft_llabs(num));
 	retlen = ft_strlen(ret);
 	if (g_precision_status == PRECISE && g_precision >= 0)
 	{
@@ -14,7 +14,7 @@ char	*ft_fixprecision_di(long num)
 		g_precision -= retlen;
 		if (g_flag == ZERO)
 			g_flag = NONE;
-		if (g_precision > ft_abs(g_width))
+		if (g_precision > ft_llabs(g_width))
 			g_width = 0;
 		else if (g_precision > 0)
 			ft_truesubtract(&g_width, g_precision);
@@ -26,7 +26,7 @@ void	ft_fixwidth_di(int retlen, int neg)
 {
 	if (g_width < 0)
 		g_flag = NONE;
-	if (ft_abs(g_width) > retlen)
+	if (ft_llabs(g_width) > retlen)
 		ft_truesubtract(&g_width, retlen + neg);
 	else
 		g_width = 0;
@@ -48,7 +48,7 @@ void	ft_print_di(void)
 		if (num < 0 && num != -2147483648)
 			ft_putchar_fd('-', FD);
 		ft_padding();
-		num = ft_abs(num);
+		num = ft_llabs(num);
 	}
 	else if (g_flag == NONE && g_width > 0)
 		ft_padding();

@@ -25,7 +25,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	@Make bonus --directory=$(LIBFT)
-	@cp libft/libft.a $(NAME)
+	@cp $(LIBFT)/libft.a $(NAME)
 	@ar -crs $(NAME) $(OBJECTS)
 	@echo libftprintf Compiled!
 
